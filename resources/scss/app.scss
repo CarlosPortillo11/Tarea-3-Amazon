@@ -1,0 +1,33 @@
+@import '~tailwindcss/base';
+@import '~tailwindcss/components';
+@import '~tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+.new {
+    line-height: 0.5;
+    text-align: center;
+}
+
+.new span {
+    display: inline-block;
+    position: relative;
+}
+
+.new span:before,
+.new span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid black;
+    top: 0;
+    width: 150px;
+}
+
+.new span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.new span:after {
+    left: 100%;
+    margin-left: 15px;
+}
