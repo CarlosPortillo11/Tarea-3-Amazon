@@ -2,6 +2,11 @@
 @import '~tailwindcss/components';
 @import '~tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+
+.font-Roboro{
+    font-family: 'Roboto', sans-serif;
+}
+
 .new {
     line-height: 0.5;
     text-align: center;
@@ -17,9 +22,9 @@
     content: "";
     position: absolute;
     height: 5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid gray;
     top: 0;
-    width: 150px;
+    width: 125px;
 }
 
 .new span:before {
@@ -30,4 +35,9 @@
 .new span:after {
     left: 100%;
     margin-left: 15px;
+}
+
+.Welcome{
+    background: url(/resources/images/homepage/Welcome.jpg);
+    background-repeat: no-repeat;
 }
