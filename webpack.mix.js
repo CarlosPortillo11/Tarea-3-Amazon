@@ -15,7 +15,9 @@ mix
   .js('resources/js/app.js', 'public/js/')
   .sass('resources/scss/app.scss', 'public/css/')
   .tailwind('./tailwind.config.js')
-  .copyDirectory('resources/images/', 'public/images/');
+  .copyDirectory('resources/images/', 'public/images/')
+  .copyDirectory('slick', 'public/slick/');
+
 
 // Full API
 // mix.js(src, output);

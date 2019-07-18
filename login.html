@@ -20,41 +20,45 @@
         <div class="flex justify-center">
             <div class="bg-white flex border border-gray-400 rounded h-auto w-2/5 mt-12">
                 <div class="px-6 py-2">
-                    <div class="mt-3">
-                        <p class="font-Roboto text-black text-3xl tracking-wide font-medium text-left">
-                            Iniciar Sesión
-                        </p>
-                        <div class="w-2/3 mt-3">
-                            <label for="user"
-                                class="font-Roboto text-black text-base font-medium tracking-wide text-left">
-                                Dirección de correo electrónico o número de telefono movil
-                            </label>
+                    <form action="/index.html">
+
+                        <div class="mt-3">
+                            <p class="font-Roboto text-black text-3xl tracking-wide font-medium text-left">
+                                Iniciar Sesión
+                            </p>
+                            <div class="w-2/3 mt-3">
+                                <label for="user"
+                                    class="font-Roboto text-black text-base font-medium tracking-wide text-left">
+                                    Dirección de correo electrónico o número de telefono movil
+                                </label>
+                            </div>
+                            <input type="text" id="user" required
+                                class="h-12 w-full mt-3 border border-gray-600 rounded font-Roboto text-lg">
                         </div>
-                        <input type="text" id="user"
-                            class="h-12 w-full mt-3 border border-gray-600 rounded font-Roboto text-lg">
-                    </div>
-                    <div class="mt-8">
-                        <div class="flex justify-between">
-                            <label for="password"
-                                class="font-Roboto text-black text-base font-medium tracking-wide text-left">
-                                Contraseña
-                            </label>
-                            <a href="">
-                                <p
-                                    class="font-Roboto text-link text-base font-medium tracking-wide hover:text-orange-500 hover:underline">
-                                    ¿Olvidaste tu contraseña?
-                                </p>
-                            </a>
+                        <div class="mt-8">
+                            <div class="flex justify-between">
+                                <label for="password"
+                                    class="font-Roboto text-black text-base font-medium tracking-wide text-left">
+                                    Contraseña
+                                </label>
+                                <a href="">
+                                    <p
+                                        class="font-Roboto text-link text-base font-medium tracking-wide hover:text-orange-500 hover:underline">
+                                        ¿Olvidaste tu contraseña?
+                                    </p>
+                                </a>
+                            </div>
+                            <input type="password" id="password" required
+                                class="h-12 w-full mt-3 border border-gray-600 font-Roboto text-3xl font-medium">
                         </div>
-                        <input type="password" id="password"
-                            class="h-12 w-full mt-3 border border-gray-600 font-Roboto text-3xl font-medium">
-                    </div>
-                    <div class="mt-5 flex justify-center">
-                        <button class="rounded w-full py-2 font-Roboto text-base font-medium"
-                            style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);">
-                            Iniciar Sesión
-                        </button>
-                    </div>
+                        <div class="mt-5 flex justify-center">
+                            <button
+                                class="rounded w-full py-2 font-Roboto text-base font-medium border-2 border-white hover:border-orange-500"
+                                style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);">
+                                Iniciar Sesión
+                            </button>
+                        </div>
+                    </form>
                     <div class="mt-5">
                         <p class="font-Roboto text-black text-sm font-normal text-left">
                             Al continuar, aceptas las
@@ -85,8 +89,6 @@
                         <div class="ml-3">
                             <select name="Detalles" id=Details class="rounded border border-gray-400 px-2">
                                 <option value="Detalles">Detalles</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
                             </select>
                         </div>
                     </div>
@@ -99,7 +101,7 @@
                     </div>
                     <div class="mt-8 mb-5 flex justify-center">
                         <button
-                            class="bg-gray-200 rounded w-full py-2 font-Roboto text-base font-medium tracking-wide border border-gray-500">
+                            class="bg-gray-200 rounded w-full py-2 font-Roboto text-base font-medium tracking-wide border border-gray-500 hover:bg-gray-300">
                             Crea tu cuenta de Amazon
                         </button>
                     </div>
@@ -113,13 +115,16 @@
             <div class="flex justify-center">
                 <div class="flex justify-around w-1/3">
                     <a href="">
-                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">Condiciones de uso</p>
+                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">
+                            Condiciones de uso</p>
                     </a>
                     <a href="">
-                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">Aviso de privacidad</p>
+                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">
+                            Aviso de privacidad</p>
                     </a>
                     <a href="">
-                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">Ayuda</p>
+                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">
+                            Ayuda</p>
                     </a>
                 </div>
             </div>

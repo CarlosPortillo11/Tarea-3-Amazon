@@ -7,10 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Amazon Lite</title>
     <link rel="stylesheet" href="/public/css/app.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/slick/slick.css">
+    <link rel="stylesheet" href="/slick/slick-theme.css">
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -23,9 +24,21 @@
                     </a>
                 </div>
                 <div class="flex ml-16">
-                    <input type="text" class="h-10 rounded-l font-Roboto text-lg tracking-wide pl-1" size="75">
+                    <div class="h-10">
+                        <select
+                            class="h-10 rounded-l pl-2 font-Roboto text-base text-gray-700 flex items-center justify-center border border-transparent"
+                            style="background: #F3F3F3;">
+                            <a href="/index.html">
+                                <option value="Todo" class="font-Roboto text-base text-black">Todo</option>
+                            </a>
+                            <a href="/shoes.html">
+                                <option value="Zapatos" class="font-Roboto text-base text-black">Zapatos</option>
+                            </a>
+                        </select>
+                    </div>
+                    <input type="text" class="h-10 font-Roboto text-lg tracking-wide pl-1 focus:outline-none" size="65">
                     <div class="flex items-center justify-center h-10 w-10 bg-yellow-500 rounded-r">
-                        <a href="">
+                        <a href="/shoes.html">
                             <img src="/resources/images/homepage/search_24px.svg">
                         </a>
                     </div>
@@ -128,7 +141,8 @@
         </nav>
     </div>
     <div class="content">
-        <div class="h-screen w-full bg-no-repeat absolute" style="background: url(/resources/images/homepage/Welcome.jpg); background-repeat: no-repeat;">
+        <div class="h-screen w-full bg-no-repeat absolute"
+            style="background: url(/resources/images/homepage/Welcome.jpg); background-repeat: no-repeat;">
             <div class="flex items-center pt-48">
                 <div class="flex mt-6 mx-4">
                     <div class="w-1/4 h-auto bg-white rounded">
@@ -200,8 +214,10 @@
                                 Inicia Sesión para vivir tu mejor experiencia
                             </p>
                             <div class="mt-6">
-                                <button class="font-Roboto font-medium text-sm tracking-wide rounded py-2 w-full"
-                                    style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);">
+                                <button
+                                    class="font-Roboto font-medium text-sm tracking-wide rounded py-2 w-full border-2 border-white hover:border-orange-500"
+                                    style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);"
+                                    onclick="window.location.href = '/login.html' ">
                                     Iniciar sesión de forma segura
                                 </button>
                             </div>
@@ -212,8 +228,8 @@
         </div>
         <div class="h-screen" style="background: #E5E5E5;">
         </div>
-        <div class="h-screen relative" style="background: #E5E5E5;">
-            <div class="bg-white mx-10 h-64">
+        <div class="relative" style="background: #E5E5E5;">
+            <div class="h-auto bg-white mx-2">
                 <div class="py-4">
                     <div class="ml-5 flex items-center">
                         <p class="font-Roboto text-xl text-black font-bold tracking-wide">
@@ -229,13 +245,29 @@
                         </span>
                     </div>
                 </div>
+                <div class="px-10">
+                    <div class="mt-5 px-3 pb-3 stock-slideshow flex">
+                        <div><a href="/product.html"><img class="focus:outline-none" src="/resources/images/homepage/prd1.jpg"></a></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd2.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd3.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd4.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd5.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd6.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd1.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd2.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd3.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd4.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd5.jpg"></div>
+                        <div><img class="focus:outline-none" src="/resources/images/homepage/prd6.jpg"></div>
+                    </div>
+                </div>
             </div>
-            <div class="mt-20">
-                <div class="bg-white mx-10 h-64">
+            <div class="mt-20 pb-20">
+                <div class="bg-white mx-2">
                     <div class="py-4">
                         <div class="ml-5 flex items-center">
                             <p class="font-Roboto text-xl text-black font-bold tracking-wide">
-                                Los Más Vendidos en Hogar y Cocina
+                                Los Más Vendidos en Deportes y Actividades al Aire Libre
                             </p>
                             <span class="ml-4">
                                 <a href="">
@@ -247,22 +279,32 @@
                             </span>
                         </div>
                     </div>
-                    <!-- <div class="mt-5 multiple-items">
-                        <div><img src="/resources/images/homepage/prd1.jpg"></div>
-                        <div><img src="/resources/images/homepage/prd2.jpg"></div>
-                        <div><img src="/resources/images/homepage/prd3.jpg"></div>
-                        <div><img src="/resources/images/homepage/prd4.jpg"></div>
-                        <div><img src="/resources/images/homepage/prd5.jpg"></div>
-                        <div><img src="/resources/images/homepage/prd6.jpg"></div>
-                    </div> -->
+                    <div class="px-10">
+                        <div class="mt-5 px-3 pb-3 stocks-slideshow flex">
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd8.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd9.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd10.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd11.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd12.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd13.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd14.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd8.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd9.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd10.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd11.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd12.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd13.jpg"></div>
+                            <div><img class="focus:outline-none" src="/resources/images/homepage/prd14.jpg"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="mt-12 h-auto w-full" style="background: #374759;">
-                <button id="return" onclick="toTop()"
-                    class="w-full h-12 bg-none font-Roboto text-lg text-white font-medium tracking-wide">
-                    Inicio de página
-                </button>
-            </div>
+        </div>
+        <div class="h-auto w-full" style="background: #374759;">
+            <button id="return" onclick="toTop()"
+                class="w-full h-12 bg-none font-Roboto text-lg text-white font-medium tracking-wide">
+                Inicio de página
+            </button>
         </div>
     </div>
     <footer class="w-full h-auto" style="background: #222E3D;">
@@ -420,6 +462,20 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+    </script>
+    <script>
+        $('.stock-slideshow').slick({
+            infinite: true,
+            slidesToShow: 6,
+            slidesToScroll: 6
+        });
+    </script>
+    <script>
+        $('.stocks-slideshow').slick({
+            infinite: true,
+            slidesToShow: 7,
+            slidesToScroll: 7
+        });
     </script>
 </body>
 

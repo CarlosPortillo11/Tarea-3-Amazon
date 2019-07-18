@@ -96,6 +96,11 @@
 console.log('hello word');
 var gretting = 'hello';
 
+function toTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 /***/ }),
 
 /***/ "./resources/scss/app.scss":
@@ -116,8 +121,8 @@ var gretting = 'hello';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/cesaramirez/Code/Elaniin/Internal/Bitlab/nano-studio/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/cesaramirez/Code/Elaniin/Internal/Bitlab/nano-studio/resources/scss/app.scss */"./resources/scss/app.scss");
+__webpack_require__(/*! C:\Users\kirup\OneDrive\Escritorio\Amazon_Lite\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\kirup\OneDrive\Escritorio\Amazon_Lite\resources\scss\app.scss */"./resources/scss/app.scss");
 
 
 /***/ })
