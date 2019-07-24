@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Directions</title>
+    <link rel="stylesheet" href="/public/css/app.css">
+</head>
+
+<body>
+    <div class="h-screen">
+        <div class="flex items-center pt-10 ml-16">
+            <div>
+                <img class="h-12" src="/resources/images/directions/logo.png">
+            </div>
+            <div class="ml-10">
+                <p class="">
+                    Este es un texto por el momento
+                </p>
+            </div>
+        </div>
+        <div class="mt-16 ml-16">
+            <div>
+                <p class="text-black text-3xl font-Roboto font-medium ">
+                    Seleccionar una dirección de envío
+                </p>
+            </div>
+            <div>
+                <p class="text-black font-Roboto text-sm font-medium">
+                    ¿Aparece a continuación la dirección que deseas utilizar? Si es así, haz clic en el botón "Envíar a
+                    esta dirección"
+                    , O puedes
+                    <button class="text-link font-Roboto text-sm font-medium" onclick="show()">
+                        introducir una nueva dirección de envío.
+                    </button>
+                </p>
+            </div>
+        </div>
+        <div class="mt-10 ml-16">
+            <div>
+                <div>
+                    <p class="text-black text-2xl font-Roboto font-bold">
+                        Scottie Frankie Pairpoint Nacey
+                    </p>
+                </div>
+                <div class="mt-2">
+                    <p class="text-black text-base font-Roboto leading-normal">
+                        641 Charing Cross Junction
+                    </p>
+                    <p class="text-black text-base font-Roboto leading-normal">
+                        Long Beach Art. 1234
+                    </p>
+                    <p class="text-black text-base font-Roboto leading-normal">
+                        Casa #22
+                    </p>
+                    <p class="text-black text-base font-Roboto leading-normal">
+                        California, Estados Unidos 1203
+                    </p>
+                    <p class="text-black text-base font-Roboto leading-normal">
+                        Teléfono Celular: 72702036
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5 ml-16 w-1/5">
+            <div>
+                <a href="/payment.html">
+                    <button
+                        class="text-sm font-Roboto font-medium tracking-wide rounded py-2 flex justify-center w-full border border-orange-400 hover:border-orange-600"
+                        style="background: linear-gradient(360deg, #EFC25C 9.31%, #F8E7C1 100%);">
+                        Entregar a esta dirección
+                    </button>
+                </a>
+            </div>
+            <div class="flex justify-between mt-3">
+                <a href="">
+                    <button
+                        class="px-10 py-1 text-sm font-Roboto font-medium tracking-wide rounded border border-gray-500 hover:border-gray-700"
+                        style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);">
+                        Editar
+                    </button>
+                </a>
+                <a href="">
+                    <button
+                        class="px-10 py-1 text-sm font-Roboto font-medium tracking-wide rounded border border-gray-500 hover:border-gray-700"
+                        style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);">
+                        Eliminar
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="h-auto hidden" id="extradress"
+        style="background: linear-gradient(180deg, #F2F2F2 0%, rgba(255, 255, 255, 0) 50.49%);">
+        <div class="ml-16 pt-10">
+            <div>
+                <p class="text-xl font-Roboto text-black font-bold">
+                    Agregar otra dirección
+                </p>
+                <p class="text-base  font-Roboto text-black mt-2">
+                    Asegúrate de hacer click en "Envíar a esta dirección", cuando hayas terminado.
+                </p>
+            </div>
+            <div class="w-1/2 mt-10 mb-32">
+                <form action="">
+                    <div class="flex flex-col">
+                        <label class="text-black font-Roboto text-base font-medium" for="name">Nombre / Quién recibe:
+                        </label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="name">
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <label class="text-black font-Roboto text-base font-medium" for="addres">Dirección (calle,
+                            número de casa o interior, torre, empresa): </label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="addres">
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <label class="text-black font-Roboto text-base font-medium" for="addres-2">Línea de dirección 2:
+                        </label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="addres-2">
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <label class="text-black font-Roboto text-base font-medium" for="city">Ciudad:</label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="city">
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <label class="text-black font-Roboto text-base font-medium" for="state">Estado:</label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="state">
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <label class="text-black font-Roboto text-base font-medium" for="zip">Código postal:</label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="zip">
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <label class="text-black font-Roboto text-base font-medium" for="country">País / región:</label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="country">
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <div class="flex">
+                            <label class="text-black font-Roboto text-base font-medium" for="number">Número de teléfono:
+                            </label>
+                            <a href="" class="text-link font-Roboto text-base font-medium pl-2 hover:underline">(más
+                                información)</a>
+                        </div>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="number">
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-sm text-white font-Roboto font-bold">
+                            Agregar instrucciones de entrega (opcional)
+                        </p>
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <label class="text-black font-Roboto text-base font-medium" for="aditional">¿Necesitamos
+                            indicaciones adicionales para encontrar esta dirección?</label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-base font-medium pl-2 focus:outline-none"
+                            type="text" id="aditional"
+                            placeholder="Proporciónanos detalles de la descripción del edificio, un punto de referencia cercano o alguna otra señal para llegar">
+                    </div>
+                    <div class="flex flex-col mt-5">
+                        <label class="text-black font-Roboto text-base font-medium" for="code">¿Necesitamos un código de
+                            seguridad o un número de casilla a llamar para acceso?</label>
+                        <input
+                            class="mt-2 bg-transparent py-2 rounded border border-gray-400 text-black font-Roboto text-lg font-medium pl-2 focus:outline-none"
+                            type="text" id="code" placeholder="1234">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="h-auto mx-auto mt-10 bg-grey border-t border-gray-500"
+        style="background: linear-gradient(180deg, #F2F2F2 0%, rgba(255, 255, 255, 0) 50.49%);s">
+        <div class="flex flex-col justify-center py-6">
+            <div class="flex justify-center">
+                <div class="flex justify-around w-1/3">
+                    <a href="">
+                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">
+                            Condiciones de uso</p>
+                    </a>
+                    <a href="">
+                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">
+                            Aviso de privacidad</p>
+                    </a>
+                    <a href="">
+                        <p class="font-Roboto text-base font-medium text-link hover:text-orange-500 hover:underline">
+                            Ayuda</p>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-5 flex justify-center">
+                <p class="font-Roboto text-base font-medium">1996-2019, Amazon.com, Inc. o sus filiales.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function show() {
+            document.getElementById('extradress').style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
