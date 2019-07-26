@@ -13,12 +13,31 @@
     <div class="h-screen">
         <div class="flex items-center pt-10 ml-16">
             <div>
-                <img class="h-12" src="/resources/images/directions/logo.png">
+                <a href="/index.html">
+                    <img class="h-12" src="/resources/images/directions/logo.png">
+                </a>
             </div>
-            <div class="ml-10">
-                <p class="">
-                    Este es un texto por el momento
-                </p>
+            <div class="flex flex-col ml-10 w-3/5">
+                <div class=" border border-gray-500 bg-gray-500">
+                    <div class="w-2/4 bg-orange-500 pt-1"></div>
+                </div>
+                <div class="flex justify-between mt-2">
+                    <div>
+                        <p class="font-Roboto text-base text-orange-500">
+                            Iniciar Sesión
+                        </p>
+                    </div>
+                    <div class="ml-16">
+                        <p class="font-Roboto text-base text-orange-500">
+                            Envío y Pago
+                        </p>
+                    </div>
+                    <div>
+                        <p class="font-Roboto text-base text-orange-500">
+                            Confirmación de Envío
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="mt-16 ml-16">
@@ -32,7 +51,7 @@
                     ¿Aparece a continuación la dirección que deseas utilizar? Si es así, haz clic en el botón "Envíar a
                     esta dirección"
                     , O puedes
-                    <button class="text-link font-Roboto text-sm font-medium" onclick="show()">
+                    <button class="text-link font-Roboto text-sm font-medium hover:underline" onclick="show()">
                         introducir una nueva dirección de envío.
                     </button>
                 </p>
@@ -75,13 +94,11 @@
                 </a>
             </div>
             <div class="flex justify-between mt-3">
-                <a href="">
-                    <button
-                        class="px-10 py-1 text-sm font-Roboto font-medium tracking-wide rounded border border-gray-500 hover:border-gray-700"
-                        style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);">
-                        Editar
-                    </button>
-                </a>
+                <button
+                    class="px-10 py-1 text-sm font-Roboto font-medium tracking-wide rounded border border-gray-500 hover:border-gray-700"
+                    style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);" onclick="show()">
+                    Editar
+                </button>
                 <a href="">
                     <button
                         class="px-10 py-1 text-sm font-Roboto font-medium tracking-wide rounded border border-gray-500 hover:border-gray-700"

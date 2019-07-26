@@ -5,21 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pagos</title>
     <link rel="stylesheet" href="/public/css/app.css">
 </head>
 
 <body>
     <div class="contain ml-16">
-        <div class="h-screen">
+        <div class="h-auto">
             <div class="flex items-center pt-10">
                 <div>
-                    <img class="h-12" src="/resources/images/directions/logo.png">
+                    <a href="/index.html">
+                        <img class="h-12" src="/resources/images/directions/logo.png">
+                    </a>
                 </div>
-                <div class="ml-10">
-                    <p class="">
-                        Este es un texto por el momento
-                    </p>
+                <div class="flex flex-col ml-10 w-3/5">
+                    <div class=" border border-gray-500 bg-gray-500">
+                        <div class="w-2/4 bg-orange-500 pt-1"></div>
+                    </div>
+                    <div class="flex justify-between mt-2">
+                        <div>
+                            <p class="font-Roboto text-base text-orange-500">
+                                Iniciar Sesión
+                            </p>
+                        </div>
+                        <div class="ml-16">
+                            <p class="font-Roboto text-base text-orange-500">
+                                Envío y Pago
+                            </p>
+                        </div>
+                        <div>
+                            <p class="font-Roboto text-base text-orange-500">
+                                Confirmación de Envío
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="mt-10 w-2/3 h-auto rounded border border-gray-400 px-3 py-3">
@@ -38,34 +57,38 @@
                 </div>
             </div>
             <div class="mt-10 w-2/3 pb-5 border-b border-gray-400">
-                <p class="font-Roboto text-3xl text-black font-bold">
+                <p class="font-Roboto text-4xl text-black font-bold">
                     Selecciona un método de pago
                 </p>
             </div>
-            <div class="mt-5 w-3/4">
+            <div class="mt-8">
                 <div class="flex items-center">
                     <div>
                         <div>
-                            <p class="font-Roboto text-2xl text-black font-bold">
+                            <p class="font-Roboto text-3xl text-black font-bold">
                                 Selecciona uno de nuestros metodos de pago
                             </p>
-                            <p class="font-Roboto text-sm text-black font-medium mt-2">
+                            <p class="font-Roboto text-base text-black mt-2">
                                 Amazon acepta la mayoría de tarjetas de crédito o débito y plataformas de pago
                             </p>
                         </div>
                     </div>
-                    <div class="flex ml-16">
+                    <div class="flex ml-12">
                         <div>
-                            <button class="h-full border border-blue-100 hover:border-blue-400">
-                                <img class="h-full" src="/resources/images/payments/paypal-badge.jpg">
-                            </button>
+                            <a href="https://www.paypal.com/sv/signin" target="_blank">
+                                <button class="h-full border border-blue-100 hover:border-blue-400">
+                                    <img class="h-full w-full" src="/resources/images/payments/paypal-badge.jpg">
+                                </button>
+                            </a>
                         </div>
                         <div class="ml-2">
-                            <button class="h-full rounded border border-gray-500 hover:border-gray-700"
-                                style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);">
+                            <button
+                                class="h-full rounded border border-gray-500 hover:border-gray-700 focus:border-gray-700 focus:outline-none"
+                                style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);"
+                                onclick="show()">
                                 <div class="flex items-center px-8">
                                     <img class="mr-2" src="/resources/images/payments/credit_card_24px.svg">
-                                    <p class="font-Roboto text-black text-sm font-medium">
+                                    <p class="font-Roboto text-black text-base font-medium">
                                         Pagar con tarjeta
                                     </p>
                                 </div>
@@ -74,9 +97,26 @@
                     </div>
                 </div>
             </div>
+            <div class="mt-10 w-2/5 hidden" id="card-info">
+                <p class="font-Roboto text-black text-xl">
+                    Ingrese la información de su tarjeta
+                </p>
+                <form id="card-form" action="">
+                    <input type="hidden" name="stripeToken" value="tok_1EwyRXBvTVUdv5mz935w4NDh">
+                    <div class="mt-5 rounded border border-gray-500 p-4" id="card-element"></div>
+                    <button type="submit"
+                        class="mt-5 py-2 px-5 bg-blue-700 font-Roboto text-base font-medium text-black rounded border border-gray-400 hover:shadow-xl hover:border-gray-600"
+                        style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);">
+                        Realizar Pago
+                    </button>
+                </form>
+                <div id="errors"
+                    class="font-Roboto text-lg text-black rounded border border-gray-500 px-2 py-3 mt-8 hidden"
+                    style="background: linear-gradient(360deg, #ECECEC 9.31%, #F9F9F9 100%);"></div>
+            </div>
         </div>
     </div>
-    <footer class="h-auto mx-auto mt-10 bg-grey border border-t border-gray-500"
+    <footer class="h-auto mx-auto mt-40 bg-grey border border-t border-gray-500"
         style="background: linear-gradient(180deg, #F2F2F2 0%, rgba(255, 255, 255, 0) 50.49%);s">
         <div class="flex flex-col justify-center py-6">
             <div class="flex justify-center">
@@ -100,6 +140,21 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function show() {
+            document.getElementById('card-info').style.display = "block";
+        }
+    </script>
+
+    <script>
+        function show() {
+            document.getElementById('card-info').style.display = "block";
+        }
+    </script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./resources/js/card.js"></script>
+
 </body>
 
 </html>
