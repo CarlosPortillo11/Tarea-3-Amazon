@@ -121,8 +121,8 @@ function toTop() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\kirup\OneDrive\Escritorio\Amazon_Lite\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\kirup\OneDrive\Escritorio\Amazon_Lite\resources\scss\app.scss */"./resources/scss/app.scss");
+__webpack_require__(/*! C:\Users\kirup\OneDrive\Escritorio\Programación Web\Bitlab\Amazon_Lite\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\kirup\OneDrive\Escritorio\Programación Web\Bitlab\Amazon_Lite\resources\scss\app.scss */"./resources/scss/app.scss");
 
 
 /***/ })

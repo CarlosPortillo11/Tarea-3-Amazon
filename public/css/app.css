@@ -8211,6 +8211,21 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+.card:hover > #prd1 {
+  border: solid;
+  border-width: thin;
+  border-color: orange;
+}
+
+.transition {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
 @media (min-width: 640px){
   .sm\:appearance-none{
     -webkit-appearance: none;
