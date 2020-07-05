@@ -51,3 +51,15 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
+
+.card:hover > #prd1 {
+border: solid;
+border-width: thin;
+border-color: orange;
+}
+
+.transition{
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
